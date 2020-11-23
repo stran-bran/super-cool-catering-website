@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="CatererService.Master.Master1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 247px;
+            height: 152px;
+        }
+        .auto-style3 {
+            width: 187px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           
+        
+   
+        </div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style3">
+                    <img alt="Caterer logo" class="auto-style2" src="https://www.pngitem.com/pimgs/m/60-608787_season-12-catering-services-catering-logo-hd-png.png" /></td>
+                <td>Navigation bar</td>
+                <td>
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+           
+        
+   
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+           
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
