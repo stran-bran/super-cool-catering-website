@@ -76,10 +76,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Confirmation email\SignUpConfirmation.txt" />
     <Content Include="Images\catering-clipart-food-catering-4.jpg" />
     <Content Include="Images\download.png" />
+    <Content Include="Images\ShoppingCart.jpg" />
+    <Content Include="Pages\Cart\Cart.aspx" />
+    <Content Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx" />
     <Content Include="Pages\Home page\Home.aspx" />
     <Content Include="Pages\Login page\Login.aspx" />
+    <Content Include="Pages\Login page\PasswordRecovery.aspx" />
+    <Content Include="Pages\Register page\Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +95,20 @@
     </Compile>
     <Compile Include="Master\Master1.Master.designer.cs">
       <DependentUpon>Master1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cart\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cart\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx.cs">
+      <DependentUpon>CatererManaging%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx.designer.cs">
+      <DependentUpon>CatererManaging%28Admin%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Home page\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -104,6 +124,20 @@
     <Compile Include="Pages\Login page\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Login page\PasswordRecovery.aspx.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login page\PasswordRecovery.aspx.designer.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Register page\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Register page\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,10 +151,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pages\Cart\" />
-    <Folder Include="Pages\Caterer Managing page\" />
     <Folder Include="Pages\Profile page\" />
-    <Folder Include="Pages\Register page\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

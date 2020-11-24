@@ -7,20 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CatererService.Pages.Home_page
+namespace CatererService.Pages.Login_page
 {
 
 
-    public partial class Home
+    public partial class PasswordRecovery
     {
 
         /// <summary>
-        /// Menu1 control.
+        /// PasswordRecovery1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
+        protected global::System.Web.UI.WebControls.PasswordRecovery PasswordRecovery1;
     }
 }

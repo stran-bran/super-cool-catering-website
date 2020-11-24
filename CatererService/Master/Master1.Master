@@ -11,12 +11,43 @@
         .auto-style1 {
             width: 100%;
         }
-        .auto-style2 {
-            width: 247px;
-            height: 152px;
+        body {
+            height:1000px;
+            margin:0;
         }
-        .auto-style3 {
-            width: 187px;
+        ul {
+            position:fixed;
+            top:0;
+            background-color:whitesmoke;
+            height:190px;
+            width:100%;
+            margin:0;
+        }
+        li {
+       
+            color: red;
+            vertical-align:middle;
+            display:inline;
+            margin: 10px;
+        }
+        .logoPic {
+            height: 100%;
+            width:100%px;
+        }
+        .login{
+         
+            vertical-align:middle;
+            
+        }
+        .auto-style5 {
+            height: 159px;
+        }
+        .auto-style6 {
+            height: 108px;
+        }
+        .auto-style8 {
+            width: 39px;
+            height: 24px;
         }
         </style>
 </head>
@@ -29,29 +60,37 @@
         </div>
         <table class="auto-style1">
             <tr>
-                <td class="auto-style3">
-                    <img alt="Caterer logo" class="auto-style2" src="https://www.pngitem.com/pimgs/m/60-608787_season-12-catering-services-catering-logo-hd-png.png" /></td>
-                <td>Navigation bar</td>
-                <td>
-                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                <td class="auto-style5">
+                  <div class="navbar">
+                    <ul class="auto-style4">
+                           <li><img alt="Caterer logo" class="logoPic" src="https://www.pngitem.com/pimgs/m/60-608787_season-12-catering-services-catering-logo-hd-png.png" /> </li> 
+                 
+                        <li><input id="searchBar" type="text" placeholder="Search..." /></li>
+                        <li><asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
+                       
+                        <li class="register"><a runnat ="server"  href="~/Pages/Register page/Register.aspx">Register</a></li>
+                        <li> <img runnat ="server" src="~\Images\ShoppingCart.jpg" class="auto-style8"/> </li>
+                         <li class="login" >
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                        </li>
+                    </ul>
+                   </div>
+                
                 </td>
             </tr>
             <tr>
-                <td colspan="3">
-           
-        
-   
+                <td class="auto-style6">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
-           
                 </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
             </tr>
         </table>
     </form>
+    <p>
+   
 </body>
 </html>

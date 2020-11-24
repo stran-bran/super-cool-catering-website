@@ -7,20 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CatererService.Pages.Home_page
+namespace CatererService.Pages.Register_page
 {
 
 
-    public partial class Home
+    public partial class Register
     {
 
         /// <summary>
-        /// Menu1 control.
+        /// CreateUserWizard1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
+        protected global::System.Web.UI.WebControls.CreateUserWizard CreateUserWizard1;
     }
 }
