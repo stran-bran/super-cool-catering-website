@@ -21,21 +21,27 @@
             background-color:whitesmoke;
             height:190px;
             width:100%;
-            margin:0;
+            
         }
         li {
-       
+
+            width: 15%;
             color: red;
+            margin-right: 5px;
             vertical-align:middle;
             display:inline;
-            margin: 10px;
+           
         }
-        .logoPic {
+        #cartImage{
+            height : 5%;
+            width : 5%;
+        }
+        #logoPictureContainsLink {
             height: 100%;
-            width:100%px;
+            width:50px;
         }
         .login{
-         
+            width: 10%;
             vertical-align:middle;
             
         }
@@ -63,13 +69,16 @@
                 <td class="auto-style5">
                   <div class="navbar">
                     <ul class="auto-style4">
-                           <li><img alt="Caterer logo" class="logoPic" src="https://www.pngitem.com/pimgs/m/60-608787_season-12-catering-services-catering-logo-hd-png.png" /> </li> 
+                           <li>
+                               <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png"  NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li> 
                  
                         <li><input id="searchBar" type="text" placeholder="Search..." /></li>
                         <li><asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
                        
-                        <li class="register"><a runnat ="server"  href="~/Pages/Register page/Register.aspx">Register</a></li>
-                        <li> <img runnat ="server" src="~\Images\ShoppingCart.jpg" class="auto-style8"/> </li>
+                        <li class="register">
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Register page/Register.aspx">Register</asp:HyperLink></li>
+                        <li>
+                            <asp:HyperLink ID="cart" runat="server"  NavigateUrl="~/Pages/Cart/Cart.aspx">Cart</asp:HyperLink> </li>
                          <li class="login" >
                             <asp:LoginStatus ID="LoginStatus1" runat="server" />
                         </li>
