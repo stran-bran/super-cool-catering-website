@@ -43,7 +43,6 @@
         .login{
             width: 10%;
             vertical-align:middle;
-            
         }
         .auto-style5 {
             height: 159px;
@@ -59,44 +58,32 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-           
-        
-   
-        </div>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style5">
-                  <div class="navbar">
                     <ul class="auto-style4">
-                           <li>
-                               <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png"  NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li> 
-                 
-                        <li><input id="searchBar" type="text" placeholder="Search..." /></li>
-                        <li><asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
-                       
+                        <%--logo image--%>
+                        <li>
+                            <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png" NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li>
+                        <%--search button and textbox--%>
+                        <li>
+                            <input id="searchBar" type="text" placeholder="Search..." /></li>
+                        <li>
+                            <asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
+                        <%--link register page--%>
                         <li class="register">
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Register page/Register.aspx">Register</asp:HyperLink></li>
+                        <%--link to cart page--%>
                         <li>
-                            <asp:HyperLink ID="cart" runat="server"  NavigateUrl="~/Pages/Cart/Cart.aspx">Cart</asp:HyperLink> </li>
-                         <li class="login" >
-                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
-                        </li>
+                            <asp:HyperLink ID="cart" runat="server" NavigateUrl="~/Pages/Cart/Cart.aspx">Cart</asp:HyperLink></li>
+                        <%--login button--%>
+                        <li class="login">
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
                     </ul>
-                   </div>
-                
                 </td>
             </tr>
-            <tr>
-                <td class="auto-style6">
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-                </td>
-            </tr>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
         </table>
     </form>
     <p>

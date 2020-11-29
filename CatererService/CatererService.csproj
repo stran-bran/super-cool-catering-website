@@ -85,6 +85,8 @@
     <Content Include="Pages\Home page\Home.aspx" />
     <Content Include="Pages\Login page\Login.aspx" />
     <Content Include="Pages\Login page\PasswordRecovery.aspx" />
+    <Content Include="Pages\ProfilePage\CatererProfile.aspx" />
+    <Content Include="Pages\ProfilePage\CustomerProfile.aspx" />
     <Content Include="Pages\Register page\Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -131,6 +133,20 @@
     <Compile Include="Pages\Login page\PasswordRecovery.aspx.designer.cs">
       <DependentUpon>PasswordRecovery.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ProfilePage\CatererProfile.aspx.cs">
+      <DependentUpon>CatererProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProfilePage\CatererProfile.aspx.designer.cs">
+      <DependentUpon>CatererProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProfilePage\CustomerProfile.aspx.cs">
+      <DependentUpon>CustomerProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProfilePage\CustomerProfile.aspx.designer.cs">
+      <DependentUpon>CustomerProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Register page\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,9 +166,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Profile page\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
