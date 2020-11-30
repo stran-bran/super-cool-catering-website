@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-        </div>
+            This is caterer profile page</div>
     </form>
 </body>
 </html>
