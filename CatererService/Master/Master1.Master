@@ -45,33 +45,37 @@
             vertical-align:middle;
             
         }
-        .auto-style5 {
+        .auto-style10 {
+            height: 25px;
+        }
+        .auto-style11 {
             height: 159px;
         }
-        .auto-style6 {
-            height: 108px;
+        .auto-style12 {
+            height: 117px;
         }
-        .auto-style8 {
-            width: 39px;
-            height: 24px;
+        .auto-style13 {
+            left: -40px;
+            top: 0;
         }
+        .auto-style14 {
+            width: 40%;
+        }
+     
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-           
         
-   
-        </div>
         <table class="auto-style1">
             <tr>
-                <td class="auto-style5">
+                <td class="auto-style11" colspan="2">
                   <div class="navbar">
-                    <ul class="auto-style4">
+                    <ul class="auto-style13">
                            <li>
                                <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png"  NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li> 
-                 
+                        <li>
+                            <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Pages/Home page/Home.aspx">Home</asp:HyperLink></li>
                         <li><input id="searchBar" type="text" placeholder="Search..." /></li>
                         <li><asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
                        
@@ -82,17 +86,26 @@
                          <li class="login" >
                             <asp:LoginStatus ID="LoginStatus1" runat="server" />
                         </li>
+                           
                     </ul>
                    </div>
                 
                 </td>
             </tr>
+
             <tr>
-                <td class="auto-style6">
-                    &nbsp;</td>
+                <td class="auto-style10" colspan="2">
+                    </td>
             </tr>
+
             <tr>
-                <td>
+              <td class="auto-style14">
+                  <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
+                  </asp:Menu>
+                  <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+              </td>
+               <td class="auto-style12"> 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
                 </td>

@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Height="329px" Width="393px">
+    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Height="329px" Width="393px" ContinueDestinationPageUrl="~/Pages/Home page/Home.aspx">
     <MailDefinition BodyFileName="~/Confirmation email/SignUpConfirmation.txt" Subject="Your New Account at CP380 Website">
         </MailDefinition>
         <WizardSteps>
@@ -10,4 +10,5 @@
         <asp:CompleteWizardStep runat="server" />
     </WizardSteps>
 </asp:CreateUserWizard>
+
 </asp:Content>
