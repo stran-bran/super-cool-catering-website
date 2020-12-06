@@ -1,15 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CatererProfile.aspx.cs" Inherits="CatererService.Pages.ProfilePage.CatererProfile" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            This is caterer profile page</div>
-    </form>
-</body>
-</html>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/Master1.Master" AutoEventWireup="true" CodeBehind="CatererProfile.aspx.cs" Inherits="CatererService.Pages.ProfilePage.CatererProfile" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <p>
+        This is caterer profile page</p>
+</asp:Content>

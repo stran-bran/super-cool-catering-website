@@ -11,7 +11,7 @@ namespace CatererService.Pages.ProfilePage
 {
 
 
-    public partial class CatererProfile
+    public partial class AdminProfile
     {
     }
 }

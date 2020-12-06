@@ -85,6 +85,7 @@
     <Content Include="Pages\Home page\Home.aspx" />
     <Content Include="Pages\Login page\Login.aspx" />
     <Content Include="Pages\Login page\PasswordRecovery.aspx" />
+    <Content Include="Pages\ProfilePage\AdminProfile.aspx" />
     <Content Include="Pages\ProfilePage\CatererProfile.aspx" />
     <Content Include="Pages\ProfilePage\CustomerProfile.aspx" />
     <Content Include="Pages\Register page\Register.aspx" />
@@ -132,6 +133,13 @@
     </Compile>
     <Compile Include="Pages\Login page\PasswordRecovery.aspx.designer.cs">
       <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProfilePage\AdminProfile.aspx.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProfilePage\AdminProfile.aspx.designer.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProfilePage\CatererProfile.aspx.cs">
       <DependentUpon>CatererProfile.aspx</DependentUpon>
