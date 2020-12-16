@@ -52,7 +52,7 @@
             height: 159px;
         }
         .auto-style12 {
-            height: 117px;
+            height: 148px;
         }
         .auto-style13 {
             left: -40px;
@@ -60,6 +60,7 @@
         }
         .auto-style14 {
             width: 40%;
+            height: 148px;
         }
      
         </style>
@@ -100,11 +101,9 @@
 
             <tr>
               <td class="auto-style14">
-                  <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
-                  </asp:Menu>
-                  <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                  
 
-              </td>
+                  &nbsp;</td>
                <td class="auto-style12"> 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
