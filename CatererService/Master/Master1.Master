@@ -8,111 +8,88 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
+        @import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+        * {
+            margin:0;
+            padding:0;
+            color:black;
+            background-color:white;
+        }
+        html,body {
+            min-height:100%;
+            align-items:center;
         }
         body {
-            height:1000px;
-            margin:0;
+            background-image:url(../Images/backGround.jpg)
         }
-        ul {
-            position:fixed;
-            top:0;
-            background-color:black;
-            height:190px;
-            width:100%;
-            
+        .navContent li,.navContent li a,.navUser li,.navUser li a{
+            color:black;
+            background-color:aliceblue;
+            font-family: 'Langar', cursive;
+            text-decoration:none;
+            font-size:large;
         }
-        li {
-
-            width: 15%;
-            color: red;
-            margin-right: 5px;
-            vertical-align:middle;
-            display:inline;
-           
+        .logo img{
+            background-color:rgb(224,171,165);
+            object-fit:cover;
+            width:200px;
+            height:100px;
+            border-radius:10px;
+            border:2px solid black;
         }
-        #cartImage{
-            height : 5%;
-            width : 5%;
+        .btnExtend {
+            display:none;
         }
-        #logoPictureContainsLink {
-            height: 100%;
-            width:50px;
-            background-color:black;
+        nav {
+            display:flex;
+            justify-content: space-between;
+            padding:0px 20px;
+            margin-right:5px;
+            align-items: center;
+            width:70%;
         }
-        .login{
-            width: 10%;
-            vertical-align:middle;
-            
+        /*anchor logo to the right*/
+        .logo{
+            margin-right:auto;
+            list-style:none;
+            margin:1%;
         }
-        .auto-style10 {
-            height: 25px;
+        /*make everything content thead same level*/
+        .navContent li,.navUser li{
+            display:inline-block;
+            padding:30px;
         }
-        .auto-style11 {
-            height: 159px;
-        }
-        .auto-style12 {
-            height: 148px;
-        }
-        .auto-style13 {
-            left: -40px;
-            top: 0;
-        }
-        .auto-style14 {
-            width: 40%;
-            height: 148px;
-        }
-     
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style11" colspan="2">
-                  <div class="navbar">
-                    <ul>
-                           <li>
-                               <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png"  NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li> 
-                        <li>
-                            <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Pages/Home page/Home.aspx">Home</asp:HyperLink></li>
-                        <li><input id="searchBar" type="text" placeholder="Search..." /></li>
-                        <li><asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
-                       
-                        <li class="register">
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Register page/Register.aspx">Register</asp:HyperLink></li>
-                        <li>
-                            <asp:HyperLink ID="cart" runat="server"  NavigateUrl="~/Pages/Cart/Cart.aspx">Cart</asp:HyperLink> </li>
-                         <li class="login" >
-                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
-                        </li>
-                           
-                    </ul>
-                   </div>
-                
-                </td>
-            </tr>
-
-            <tr>
-                <td class="auto-style10" colspan="2">
-                    </td>
-            </tr>
-
-            <tr>
-              <td class="auto-style14">
-                  
-
-                  &nbsp;</td>
-               <td class="auto-style12"> 
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-                </td>
-            </tr>
-        </table>
+        <nav>
+            <div class="logo">
+                <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.v2.png" NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink>
+            </div>
+            <div class="navContent">
+                <ul>
+                    <li>
+                        <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Pages/Home page/Home.aspx">Home</asp:HyperLink></li>
+                    <li>
+                        <input id="searchBar" type="text" placeholder="Search..." /></li>
+                    <li>
+                        <asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
+                </ul>
+            </div>
+            <div class="navUser">
+                <ul>
+                    <li>
+                        <asp:HyperLink ID="cart" runat="server" NavigateUrl="~/Pages/Cart/Cart.aspx">Cart</asp:HyperLink></li>
+                    <li class="register">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Register page/Register.aspx">Register</asp:HyperLink></li>
+                    <li class="login">
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
+                </ul>
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
     </form>
-   
-   
 </body>
 </html>
