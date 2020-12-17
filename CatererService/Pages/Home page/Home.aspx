@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/Master1.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="CatererService.Pages.Home_page.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+        * {
+            background-color:black;
+            color:white;
+        }
+
         .auto-style20 {
             height: 71px;
             width: 185px;

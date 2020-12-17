@@ -18,7 +18,7 @@
         ul {
             position:fixed;
             top:0;
-            background-color:whitesmoke;
+            background-color:black;
             height:190px;
             width:100%;
             
@@ -39,6 +39,7 @@
         #logoPictureContainsLink {
             height: 100%;
             width:50px;
+            background-color:black;
         }
         .login{
             width: 10%;
