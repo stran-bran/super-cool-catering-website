@@ -2,13 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         * {
-            background-color:black;
-            color:white;
+            background-color:white;
+            color:black;
         }
 
         .auto-style20 {
             height: 71px;
             width: 185px;
+            text-align: left;
         }
                      
         .lblPrice1{
@@ -17,10 +18,12 @@
         .auto-style23 {
             height: 70px;
             width: 185px;
+            text-align: left;
         }
         .auto-style27 {
             height: 71px;
             width: 390px;
+            text-align: left;
         }
         .auto-style28 {
             margin-right: 0px;
@@ -28,6 +31,7 @@
         .auto-style29 {
             height: 72px;
             width: 185px;
+            text-align: left;
         }
         .auto-style31 {
             height: 72px;
@@ -45,10 +49,12 @@
             height: 70px;
             width: 138px;
         }
+        .auto-style35 {
+            text-align: left;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p> Caterer list and offerring services</p>
     <table class="auto-style1">
         <tr>
             <td class="auto-style29">Tiffany Tran </td>
@@ -60,6 +66,8 @@
                     <asp:Label  runat="server" Text="Chicken &amp; ground beef" Width="250px"></asp:Label>  
                     <asp:Label ID="lblPrice1" runat="server" Text="$20" Width="30px"></asp:Label>
                 </asp:Panel>
+                
+                <p class="auto-style35"> Caterer list and offerring services</p>
                 
             </td>
         </tr>

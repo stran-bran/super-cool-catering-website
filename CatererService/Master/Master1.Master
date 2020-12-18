@@ -85,26 +85,52 @@
         <nav>
             <div class="logo">
                 <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.v2.png" NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink>
-            </div>
-            <div class="navContent">
                 <ul>
+                    <li>
+                        </li>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="ID" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
+                        <Columns>
+                            <asp:BoundField DataField="Item" HeaderText="Item" SortExpression="Item" />
+                            <asp:BoundField DataField="about" HeaderText="about" SortExpression="about" />
+                            <asp:BoundField DataField="Calories" HeaderText="Calories" SortExpression="Calories" />
+                            <asp:BoundField DataField="Inventory" HeaderText="Inventory" SortExpression="Inventory" />
+                            <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+                        </Columns>
+                        
+                        <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                        <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                        <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                        <SortedDescendingHeaderStyle BackColor="#93451F" />
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CatererServiceDatabaseConnectionString1 %>" SelectCommand="SELECT * FROM [Items] WHERE ([Item] LIKE '%' + @Item + '%')">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="TextBox1" Name="Item" PropertyName="Text" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                        <asp:Button ID="btnSearch" runat="server" Text="Search" Width="61px" CssClass="btnSearch"/>
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </ul>
+                &nbsp;<ul>
                     <li>
                         <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Pages/Home page/Home.aspx">Home</asp:HyperLink></li>
                     <li>
-                        <input ID="txtSearch" type="text" placeholder="Search..." Class="txtSearch"/></li>
-                    <li>
-                        <asp:Button ID="btnSearch" runat="server" Text="Search" Width="61px" CssClass="btnSearch"/></li>
-                </ul>
-            </div>
-            <div class="navUser">
-                <ul>
-                    <li>
                         <asp:HyperLink ID="cart" runat="server" NavigateUrl="~/Pages/Cart/Cart.aspx">Cart</asp:HyperLink></li>
-                    <li class="register">
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Register page/Register.aspx">Register</asp:HyperLink></li>
+                </ul>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Register page/Register.aspx">Register</asp:HyperLink>
+                <ul>
                     <li class="login">
                         <asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
                 </ul>
+                <br />
+                <div class="navContent">
+                <ul>
+                </ul>
+                </div>
+            </div>
+            <div class="navUser">
             </div>
         </nav>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
