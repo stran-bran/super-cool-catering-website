@@ -71,6 +71,13 @@
             padding:0;
             height:100%;
         }
+        /*animation*/
+        .navContent li,.navContent li a,.navUser li,.navUser li a{
+            transition:all 0.4s ease 0s;
+        }
+        .navContent li a:hover, .navUser li a:hover {
+            color:slategray;
+        }
         </style>
 </head>
 <body>
