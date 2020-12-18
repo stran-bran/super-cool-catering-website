@@ -28,14 +28,7 @@
         html,body,form{
             min-height:100%;
             align-items:center;
-            background:black;
-        ul {
-            position:relative;
-            top:0;
-            background-color: whitesmoke;
-            height:190px;
-            width:100%;
-            
+            background:white;
         }
         .navContent li,.navContent li a,.navUser li,.navUser li a{
             color:black;
@@ -160,42 +153,6 @@
         </nav>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style15" colspan="2">
-                  <div class="navbar">
-                    <ul class="auto-style13">
-                           <li>
-                               <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png"  NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li> 
-                        <li>
-                            <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Pages/Home page/Home.aspx">Home</asp:HyperLink></li>
-                        <li><input id="searchBar" type="text" placeholder="Search..." /></li>
-                        <li><asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
-                       
-                        <li class="register">
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Register page/Register.aspx">Register</asp:HyperLink></li>
-                        <li>
-                            <asp:HyperLink ID="cart" runat="server"  NavigateUrl="~/Pages/Cart/Cart.aspx">Cart</asp:HyperLink> </li>
-                         <li class="login" >
-                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
-                        </li>
-                           
-                    </ul>
-                   </div>
-                
-                </td>
-            </tr>
-            <tr>
-              <td class="auto-style14">
-                  <uc2:CatererList ID="CatererList1" runat="server" />
-                  <br />
-                </td>
-               <td class="auto-style12"> 
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-                </td>
-            </tr>
-        </table>
     </form>
 </body>
 </html>
