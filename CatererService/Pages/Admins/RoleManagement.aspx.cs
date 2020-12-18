@@ -44,12 +44,11 @@ namespace CatererService.Pages.Admins
 
         private void CheckRolesForSelectedUser()
         {
-            string selectUserName = ddlUserList.SelectedValue;
+            string selectUserName = ddUserList.SelectedValue;
             string[] selectedUserRoles = System.Web.Security.Roles.GetRolesForUser(selectUserName);
 
             foreach (RepeaterItem ri in UsersRoleList.Items) {
                 CheckBox RoleCheckBox = ri.FindControl("RoleCheckBox") as CheckBox;
-
                 if (selectedUserRoles.Contains<string>(RoleCheckBox.Text)) 
                 RoleCheckBox.Checked = true;
                 else
@@ -62,7 +61,7 @@ namespace CatererService.Pages.Admins
             //Reference check box raise the event 
             CheckBox RoleCheckBox = sender as CheckBox;
 
-            string selectedUserName = ddlUserList.SelectedValue;
+            string selectedUserName = ddUserList.SelectedValue;
             string roleName = RoleCheckBox.Text;
 
             if (RoleCheckBox.Checked)
