@@ -82,14 +82,15 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\logo.v2.png" />
     <Content Include="Images\ShoppingCart.jpg" />
+    <Content Include="Pages\Admins\RoleManagement.aspx" />
     <Content Include="Pages\Cart\Cart.aspx" />
-    <Content Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx" />
+    <Content Include="Pages\Admins\RoleManaging%28Admin%29.aspx" />
     <Content Include="Pages\Home page\Home.aspx" />
     <Content Include="Pages\Login page\Login.aspx" />
     <Content Include="Pages\Login page\PasswordRecovery.aspx" />
-    <Content Include="Pages\ProfilePage\AdminProfile.aspx" />
-    <Content Include="Pages\ProfilePage\CatererProfile.aspx" />
-    <Content Include="Pages\ProfilePage\CustomerProfile.aspx" />
+    <Content Include="Pages\Admins\AdminProfile.aspx" />
+    <Content Include="Pages\Caterers\CatererProfile.aspx" />
+    <Content Include="Pages\Members\CustomerProfile.aspx" />
     <Content Include="Pages\Register page\Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -108,6 +109,13 @@
     <Compile Include="Master\Master1.Master.designer.cs">
       <DependentUpon>Master1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Admins\RoleManagement.aspx.cs">
+      <DependentUpon>RoleManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admins\RoleManagement.aspx.designer.cs">
+      <DependentUpon>RoleManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Cart\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,12 +123,12 @@
     <Compile Include="Pages\Cart\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx.cs">
-      <DependentUpon>CatererManaging%28Admin%29.aspx</DependentUpon>
+    <Compile Include="Pages\Admins\RoleManaging%28Admin%29.aspx.cs">
+      <DependentUpon>RoleManaging%28Admin%29.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx.designer.cs">
-      <DependentUpon>CatererManaging%28Admin%29.aspx</DependentUpon>
+    <Compile Include="Pages\Admins\RoleManaging%28Admin%29.aspx.designer.cs">
+      <DependentUpon>RoleManaging%28Admin%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Home page\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -143,25 +151,25 @@
     <Compile Include="Pages\Login page\PasswordRecovery.aspx.designer.cs">
       <DependentUpon>PasswordRecovery.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ProfilePage\AdminProfile.aspx.cs">
+    <Compile Include="Pages\Admins\AdminProfile.aspx.cs">
       <DependentUpon>AdminProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\ProfilePage\AdminProfile.aspx.designer.cs">
+    <Compile Include="Pages\Admins\AdminProfile.aspx.designer.cs">
       <DependentUpon>AdminProfile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ProfilePage\CatererProfile.aspx.cs">
+    <Compile Include="Pages\Caterers\CatererProfile.aspx.cs">
       <DependentUpon>CatererProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\ProfilePage\CatererProfile.aspx.designer.cs">
+    <Compile Include="Pages\Caterers\CatererProfile.aspx.designer.cs">
       <DependentUpon>CatererProfile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ProfilePage\CustomerProfile.aspx.cs">
+    <Compile Include="Pages\Members\CustomerProfile.aspx.cs">
       <DependentUpon>CustomerProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\ProfilePage\CustomerProfile.aspx.designer.cs">
+    <Compile Include="Pages\Members\CustomerProfile.aspx.designer.cs">
       <DependentUpon>CustomerProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Register page\Register.aspx.cs">
