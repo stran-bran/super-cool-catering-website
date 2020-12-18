@@ -15,12 +15,10 @@
             color:black;
             background-color:white;
         }
-        html,body {
+        html,body,form{
             min-height:100%;
             align-items:center;
-        }
-        body {
-            background-image:url(../Images/backGround.jpg)
+            background:black;
         }
         .navContent li,.navContent li a,.navUser li,.navUser li a{
             color:black;
@@ -44,9 +42,16 @@
             display:flex;
             justify-content: space-between;
             padding:0px 20px;
-            margin-right:5px;
+            margin:7%;
+            margin-top:0;
+            margin-bottom:1%;
             align-items: center;
-            width:70%;
+            border-radius:20px;
+            border-top-left-radius:0;
+            border-top-right-radius:0;
+        }
+        .navContent, .navContent {
+            background-color:rgb(195, 195, 195);
         }
         /*anchor logo to the right*/
         .logo{
@@ -58,6 +63,13 @@
         .navContent li,.navUser li{
             display:inline-block;
             padding:30px;
+            min-height:100%;
+            border-left:1px solid black;
+        }
+        /*nav bar element styling*/
+        .txtSearch {
+            padding:0;
+            height:100%;
         }
         </style>
 </head>
@@ -72,9 +84,9 @@
                     <li>
                         <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Pages/Home page/Home.aspx">Home</asp:HyperLink></li>
                     <li>
-                        <input id="searchBar" type="text" placeholder="Search..." /></li>
+                        <input ID="txtSearch" type="text" placeholder="Search..." Class="txtSearch"/></li>
                     <li>
-                        <asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
+                        <asp:Button ID="btnSearch" runat="server" Text="Search" Width="61px" CssClass="btnSearch"/></li>
                 </ul>
             </div>
             <div class="navUser">
