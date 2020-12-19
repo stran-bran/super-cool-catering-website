@@ -7,6 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+<<<<<<< HEAD:CatererService/Caterer/CatererPackages.aspx.designer.cs
+namespace CatererService.Caterer
+{
+
+
+    public partial class CatererPackages
+    {
+
+        /// <summary>
+        /// DataList1 control.
+=======
 namespace CatererService.Pages.Admins
 {
 
@@ -16,20 +27,32 @@ namespace CatererService.Pages.Admins
 
         /// <summary>
         /// GridView1 control.
+>>>>>>> 9f755879e2228b0383267bbdc400c11f38117f96:CatererService/Pages/Admins/Report(admin).aspx.designer.cs
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD:CatererService/Caterer/CatererPackages.aspx.designer.cs
+        protected global::System.Web.UI.WebControls.DataList DataList1;
+
+        /// <summary>
+        /// SqlDS_PackagesList control.
+=======
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
         /// Sqlreport control.
+>>>>>>> 9f755879e2228b0383267bbdc400c11f38117f96:CatererService/Pages/Admins/Report(admin).aspx.designer.cs
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD:CatererService/Caterer/CatererPackages.aspx.designer.cs
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDS_PackagesList;
+=======
         protected global::System.Web.UI.WebControls.SqlDataSource Sqlreport;
+>>>>>>> 9f755879e2228b0383267bbdc400c11f38117f96:CatererService/Pages/Admins/Report(admin).aspx.designer.cs
     }
 }
