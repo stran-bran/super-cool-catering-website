@@ -46,7 +46,7 @@
     </asp:FormView>
     
     
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Caterers]"></asp:SqlDataSource>
     
     
 </asp:Content>

@@ -1,5 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="CatererService.Master.Master1" %>
 
+<%@ Register src="../Caterer/CatererList.ascx" tagname="CatererList" tagprefix="uc1" %>
+<%@ Register src="../Caterer/CatererList.ascx" tagname="CatererList" tagprefix="uc2" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -10,15 +13,18 @@
     <style type="text/css">
         .auto-style1 {
             width: 100%;
+            margin-top:0px;
+            height: 412px;
         }
         body {
             height:1000px;
             margin:0;
+            background-color: gainsboro;
         }
         ul {
-            position:fixed;
+            position:relative;
             top:0;
-            background-color:whitesmoke;
+            background-color: whitesmoke;
             height:190px;
             width:100%;
             
@@ -45,32 +51,33 @@
             vertical-align:middle;
             
         }
-        .auto-style10 {
-            height: 25px;
-        }
-        .auto-style11 {
-            height: 159px;
-        }
         .auto-style12 {
-            height: 148px;
+            width:50%;
+             margin-top: 0px;
+           height: 400px;
+             
         }
         .auto-style13 {
             left: -40px;
             top: 0;
         }
         .auto-style14 {
-            width: 40%;
-            height: 148px;
+            width: 31%;
+           position:relative;
+           margin-top: 0px;
+        }
+     
+        .auto-style15 {
+            height: 134px;
         }
      
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        
         <table class="auto-style1">
             <tr>
-                <td class="auto-style11" colspan="2">
+                <td class="auto-style15" colspan="2">
                   <div class="navbar">
                     <ul class="auto-style13">
                            <li>
@@ -93,17 +100,11 @@
                 
                 </td>
             </tr>
-
-            <tr>
-                <td class="auto-style10" colspan="2">
-                    </td>
-            </tr>
-
             <tr>
               <td class="auto-style14">
-                  
-
-                  &nbsp;</td>
+                  <uc2:CatererList ID="CatererList1" runat="server" />
+                  <br />
+                </td>
                <td class="auto-style12"> 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>

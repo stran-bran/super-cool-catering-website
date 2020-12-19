@@ -1,6 +1,4 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -45,12 +43,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -72,16 +72,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="CatererList.ascx" />
+    <Content Include="Caterer\CatererList.ascx" />
+    <Content Include="Caterer\CatererPackages.aspx" />
     <Content Include="Confirmation email\SignUpConfirmation.txt" />
+    <Content Include="Images\breakfast.jpg" />
     <Content Include="Images\catering-clipart-food-catering-4.jpg" />
+    <Content Include="Images\familyDinner.jpg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\NoodlesBowl.jpg" />
+    <Content Include="Images\organicFruits.jpg" />
+    <Content Include="Images\padThai.jpg" />
+    <Content Include="Images\Pizza.jpg" />
     <Content Include="Images\ShoppingCart.jpg" />
+    <Content Include="Images\steak&amp;Lobster.jpg" />
+    <Content Include="Images\veggieLunch.jpg" />
+    <Content Include="Images\wholeChicken.jpg" />
     <Content Include="Pages\Cart\Cart.aspx" />
     <Content Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx" />
     <Content Include="Pages\Home page\Home.aspx" />
@@ -94,12 +99,19 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatererList.ascx.cs">
+    <Compile Include="Caterer\CatererList.ascx.cs">
       <DependentUpon>CatererList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CatererList.ascx.designer.cs">
+    <Compile Include="Caterer\CatererList.ascx.designer.cs">
       <DependentUpon>CatererList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Caterer\CatererPackages.aspx.cs">
+      <DependentUpon>CatererPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Caterer\CatererPackages.aspx.designer.cs">
+      <DependentUpon>CatererPackages.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master\Master1.Master.cs">
       <DependentUpon>Master1.Master</DependentUpon>
@@ -175,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master\Master1.Master" />
+    <Content Include="libman.json" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CatererService - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
@@ -184,6 +197,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
@@ -211,15 +227,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
-  </Target>
-  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
