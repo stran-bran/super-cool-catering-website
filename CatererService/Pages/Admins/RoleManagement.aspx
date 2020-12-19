@@ -5,17 +5,16 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Label ID="Label1" runat="server" Text="Create Roles: "></asp:Label><br />
-
+    <h2>Create roles:</h2>
     <p>Role Name: <br/>
     <asp:TextBox ID="txtRoleName" runat="server" Height="25px" Width="198px"></asp:TextBox>
     <asp:Button ID="btnNewRoles" runat="server" Text="Create new roles" OnClick="btnNewRoles_Click" />
     </p>
     <br />
     <p>
-        Role List:<br/>
-        <asp:DropDownList ID="ddlUserList" runat="server" AutoPostBack="True" DataSourceID="SqlRoleList" DataTextField="RoleName" DataValueField="RoleName"></asp:DropDownList>
+        Role list:<br/>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:CatererServiceDatabaseConnectionString1 %>" SelectCommand="SELECT [RoleName] FROM [Roles]"></asp:SqlDataSource>
-        <asp:GridView ID="grdRoleList" runat="server" AutoGenerateColumns="False" DataKeyNames="RoleId" DataSourceID="SqlRoleList" Height="128px" Width="456px">
+        <asp:GridView ID="grdRoleList" runat="server" AutoGenerateColumns="False" DataKeyNames="RoleId" DataSourceID="SqlRoleList" Height="128px" Width="456px" OnSelectedIndexChanged="grdRoleList_SelectedIndexChanged">
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="RoleId" HeaderText="RoleId" ReadOnly="True" SortExpression="RoleId" Visible="False" />
@@ -58,32 +57,30 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     </p>
-    <%--<p>
+    <p><br/>
         <asp:Label ID="lblSelectedRoleUSer" runat="server" Text="Member in role: "></asp:Label><br />
-        <asp:Repeater ID="RoleUserlist" runat="server">
+        <asp:Repeater ID="repUsersInRole" runat="server">
             <ItemTemplate>
                 <asp:Label runat="server" ID="lblUsers" AutoPostBack="true" Text='<%# Container.DataItem %>'></asp:Label>
                 <br/>
             </ItemTemplate>
         </asp:Repeater>
-    </p>--%>
-    <h2>Assign User's Roles:</h2><br/>
+    </p>
+    <br/>
+    <h2>Assign User's Roles:</h2>
     <p>
-        User List:
-        <br />
-        <asp:DropDownList ID="ddUserList" runat="server" DataSourceID="SqlUserList" DataTextField="UserName" DataValueField="UserName" OnSelectedIndexChanged="ddUserList_SelectedIndexChanged">
-        </asp:DropDownList>
+        User List:<br />
+        <asp:DropDownList runat="server" ID="ddUserList" AutoPostBack="true" DataSourceID="SqlUserList" DataTextField="UserName" DataValueField="UserName" OnSelectedIndexChanged="ddUserList_SelectedIndexChanged">
+        </asp:DropDownList><br />
         <asp:SqlDataSource ID="SqlUserList" runat="server" ConnectionString="<%$ ConnectionStrings:CatererServiceDatabaseConnectionString1 %>" SelectCommand="SELECT [UserName], [UserId] FROM [Users]"></asp:SqlDataSource>
-        <asp:SqlDataSource ID="SqlUserName" runat="server" ConnectionString="<%$ ConnectionStrings:CatererServiceDatabaseConnectionString %>" SelectCommand="SELECT [UserName], [UserId] FROM [Users]"></asp:SqlDataSource>
-        <br />
         <asp:Repeater ID="UsersRoleList" runat="server" DataSourceID="UserRoleListItem">
             <ItemTemplate>
-                <asp:CheckBox ID="RoleCheckBox" runat="server" AutoPostBack="true" Text='<%# Eval("RoleName") %>' OnCheckedChanged="RoleCheckBox_CheckChanged" />
+                <asp:CheckBox runat="server" ID="RoleCheckBox" AutoPostBack="true" Text='<%# Eval("RoleName") %>' OnCheckedChanged="RoleCheckBox_CheckChanged" />
                 <br />
             </ItemTemplate>
         </asp:Repeater>
-    <asp:SqlDataSource ID="UserRoleListItem" runat="server" ConnectionString="<%$ ConnectionStrings:CatererServiceDatabaseConnectionString1 %>" SelectCommand="SELECT [RoleName] FROM [Roles]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="UserRoleListItem" runat="server" ConnectionString="<%$ ConnectionStrings:CatererServiceDatabaseConnectionString1 %>" SelectCommand="SELECT [RoleName] FROM [Roles]"></asp:SqlDataSource>
     </p>
     <p>
-        <asp:Label ID="lblActionStatus" runat="server" Text="bruh"></asp:Label></p>
+        <asp:Label ID="lblActionStatus" runat="server" Text="tomato"></asp:Label></p>
 </asp:Content>

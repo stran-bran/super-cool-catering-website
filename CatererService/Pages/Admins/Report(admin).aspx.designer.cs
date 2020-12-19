@@ -7,29 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CatererService.Pages.Caterer_Managing_page
+namespace CatererService.Pages.Admins
 {
 
 
-    public partial class CatererManaging_Admin_
+    public partial class Report_admin_
     {
 
         /// <summary>
-        /// FormView1 control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView FormView1;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// Sqlreport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource Sqlreport;
     }
 }

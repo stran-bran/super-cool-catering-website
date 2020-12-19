@@ -42,15 +42,6 @@ namespace CatererService.Pages.Admins
         protected global::System.Web.UI.WebControls.Button btnNewRoles;
 
         /// <summary>
-        /// ddlUserList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUserList;
-
-        /// <summary>
         /// SqlDataSource2 control.
         /// </summary>
         /// <remarks>
@@ -87,6 +78,24 @@ namespace CatererService.Pages.Admins
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
+        /// lblSelectedRoleUSer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelectedRoleUSer;
+
+        /// <summary>
+        /// repUsersInRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repUsersInRole;
+
+        /// <summary>
         /// ddUserList control.
         /// </summary>
         /// <remarks>
@@ -103,15 +112,6 @@ namespace CatererService.Pages.Admins
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlUserList;
-
-        /// <summary>
-        /// SqlUserName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlUserName;
 
         /// <summary>
         /// UsersRoleList control.
