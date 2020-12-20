@@ -113,15 +113,6 @@
                 </td>
             </tr>
         </table>
-   <footer>
-
-       <asp:LoginView ID="LoginView1" runat="server">
-           <LoggedInTemplate>
-               <a href="../Pages/Home%20page/ResetPassword.aspx">ChangePassword</a>
-           </LoggedInTemplate>
-       </asp:LoginView>
-
-   </footer>
 
    
     </form>
