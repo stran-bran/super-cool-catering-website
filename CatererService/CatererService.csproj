@@ -88,6 +88,7 @@
     <Content Include="Images\veggieLunch.jpg" />
     <Content Include="Images\wholeChicken.jpg" />
     <Content Include="Pages\Admin\CatererManagement%28admin%29.aspx" />
+    <Content Include="Pages\Admin\Report%28Admin%29.aspx" />
     <Content Include="Pages\Cart\Cart.aspx" />
     <Content Include="Pages\Home page\Home.aspx" />
     <Content Include="Pages\Login page\Login.aspx" />
@@ -126,6 +127,13 @@
     </Compile>
     <Compile Include="Pages\Admin\CatererManagement%28admin%29.aspx.designer.cs">
       <DependentUpon>CatererManagement%28admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Report%28Admin%29.aspx.cs">
+      <DependentUpon>Report%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Report%28Admin%29.aspx.designer.cs">
+      <DependentUpon>Report%28Admin%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Cart\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>

@@ -5,16 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CatererService.Master
+namespace CatererService.Pages.Admin
 {
-    public partial class Master1 : System.Web.UI.MasterPage
+    public partial class Dashboard_admin_ : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void LoginStatus1_LoggingOut(object sender, LoginCancelEventArgs e)
         {
 
         }

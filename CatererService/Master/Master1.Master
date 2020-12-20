@@ -80,8 +80,8 @@
                 <td class="auto-style15" colspan="2">
                   <div class="navbar">
                     <ul class="auto-style13">
-                           <li>
-                               <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png"  NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li> 
+                        <li>
+                            <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png"  NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li> 
                         <li>
                             <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Pages/Home page/Home.aspx">Home</asp:HyperLink></li>
                         <li><input id="searchBar" type="text" placeholder="Search..." /></li>
