@@ -87,8 +87,8 @@
     <Content Include="Images\steak&amp;Lobster.jpg" />
     <Content Include="Images\veggieLunch.jpg" />
     <Content Include="Images\wholeChicken.jpg" />
+    <Content Include="Pages\Admin\CatererManagement%28admin%29.aspx" />
     <Content Include="Pages\Cart\Cart.aspx" />
-    <Content Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx" />
     <Content Include="Pages\Home page\Home.aspx" />
     <Content Include="Pages\Login page\Login.aspx" />
     <Content Include="Pages\Login page\PasswordRecovery.aspx" />
@@ -120,19 +120,19 @@
     <Compile Include="Master\Master1.Master.designer.cs">
       <DependentUpon>Master1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Admin\CatererManagement%28admin%29.aspx.cs">
+      <DependentUpon>CatererManagement%28admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\CatererManagement%28admin%29.aspx.designer.cs">
+      <DependentUpon>CatererManagement%28admin%29.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Cart\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Cart\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx.cs">
-      <DependentUpon>CatererManaging%28Admin%29.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Caterer Managing page\CatererManaging%28Admin%29.aspx.designer.cs">
-      <DependentUpon>CatererManaging%28Admin%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Home page\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
