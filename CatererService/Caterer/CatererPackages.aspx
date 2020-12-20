@@ -30,16 +30,26 @@
         .auto-style28 {
             font-size: medium;
         }
+        .auto-style30 {
+            width: 221px;
+            height: 31px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   
+   
     <asp:DataList ID="DataList1" runat="server" DataKeyField="Package_ID" DataSourceID="SqlDS_PackagesList" width="400px"  CssClass="auto-style27" Height="400px" RepeatColumns="3" RepeatDirection="Horizontal" OnItemCommand="DataList1_ItemCommand">
+        <EditItemTemplate>
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+
+        </EditItemTemplate>
     <ItemTemplate>
         <table class="auto-style18" style="text-align:center; border:groove; width:300px;">
             <tr>
                 <td class="auto-style22">
                     <asp:Image ID="Image1" runat="server" ImageUrl='<%# "../Images/" + Eval("Package_Image") %>' Height="300px" Width="360px" />
-                    <br />
+                   
                     <br />
                     <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# Eval("Package_ID") %>' />
                 </td>
@@ -94,7 +104,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style26">
+                    <td class="auto-style30">
                         <asp:Button ID="btnHideDetails" runat="server" Text="Hide Package Details" />
                     </td>
                 </tr>
@@ -102,17 +112,24 @@
                     <td class="auto-style26">
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SQLDS_PackageItems">
                             <Columns>
-                                <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
-                                <asp:BoundField DataField="Item" HeaderText="Item" SortExpression="Item" />
-                                <asp:BoundField DataField="about" HeaderText="about" SortExpression="about" />
+                                <asp:TemplateField HeaderText="Item_Image" SortExpression="Item_Image">
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Item_Image") %>'>
+
+                                        </asp:TextBox><asp:Image ID="Image2" runat="server" ImageUrl='<%# "../Images/" +Eval("Item_Image") %>' Height="250px" Width="230px"/>
+                                    </EditItemTemplate>
+                                    <ItemTemplate>
+                                        </asp:TextBox><asp:Image ID="Image2" runat="server" ImageUrl='<%# "../Images/" +Eval("Item_Image") %>'  Height="250px" Width="230px"/>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:BoundField DataField="Item" HeaderText="Item_Name" SortExpression="Item" />
+                                <asp:BoundField DataField="about" HeaderText="Description" SortExpression="about" />
                                 <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
                                 <asp:BoundField DataField="Calories" HeaderText="Calories" SortExpression="Calories" />
-                                <asp:BoundField DataField="Inventory" HeaderText="Inventory" SortExpression="Inventory" />
-                                <asp:BoundField DataField="Package_ID" HeaderText="Package_ID" SortExpression="Package_ID" />
                                 <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
                             </Columns>
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SQLDS_PackageItems" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT Items.*, Package_Items.Package_ID, Package_Items.Quantity FROM Items INNER JOIN Package_Items ON Items.ID = Package_Items.Item_ID WHERE (Package_Items.Package_ID = @pkgID)">
+                        <asp:SqlDataSource ID="SQLDS_PackageItems" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT Items.*, Package_Items.Package_ID, Package_Items.Quantity FROM Package_Items INNER JOIN Items ON Package_Items.Item_ID = Items.ID WHERE (Package_Items.Package_ID = @pkgID)">
                             <SelectParameters>
                                 <asp:ControlParameter ControlID="hfPkgID" Name="pkgID" PropertyName="Value" />
                             </SelectParameters>
