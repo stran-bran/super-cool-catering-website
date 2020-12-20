@@ -91,8 +91,10 @@
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Register page/Register.aspx">Register</asp:HyperLink></li>
                         <li>
                             <asp:HyperLink ID="cart" runat="server"  NavigateUrl="~/Pages/Cart/Cart.aspx">Cart</asp:HyperLink> </li>
-                         <li class="login" >
-                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                           <li>
+                               <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                           </li>
+                           <li class="login" >
                         </li>
                            
                     </ul>
@@ -111,6 +113,8 @@
                 </td>
             </tr>
         </table>
+
+   
     </form>
    
    
