@@ -13,5 +13,18 @@ namespace CatererService.Caterer
         {
 
         }
+
+        protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (((Button)e.CommandSource).ID.Equals("btnHideDetails"))
+
+                DataList1.SelectedIndex = -1;
+            else
+                DataList1.SelectedIndex = e.Item.ItemIndex;
+            
+
+            DataList1.SelectedIndex = e.Item.ItemIndex;
+            DataList1.DataBind();
+        }
     }
 }
