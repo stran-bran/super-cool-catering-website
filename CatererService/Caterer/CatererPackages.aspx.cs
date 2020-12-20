@@ -20,8 +20,15 @@ namespace CatererService.Caterer
                 DataList1.SelectedIndex = -1;
             else
                 DataList1.SelectedIndex = e.Item.ItemIndex;
-      
+
             DataList1.DataBind();
+
+            if (e.CommandName == "AddtoCart")
+            {
+                DropDownList list = (DropDownList)(e.Item.FindControl("DropDownList1"));
+                Response.Redirect("AddtoCart.aspx?id=" + e.CommandArgument.ToString() + "&quantity" + list.SelectedItem.ToString());
+
+            }
         }
     }
 }

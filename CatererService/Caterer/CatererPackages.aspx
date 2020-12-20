@@ -34,6 +34,10 @@
             width: 221px;
             height: 31px;
         }
+        .auto-style31 {
+            width: 221px;
+            margin-left: 80px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -134,7 +138,28 @@
                                 <asp:ControlParameter ControlID="hfPkgID" Name="pkgID" PropertyName="Value" />
                             </SelectParameters>
                         </asp:SqlDataSource>
+                        <br />
                     </td>
+                 </tr>
+                <tr>
+             
+                        <td class="auto-style31">
+
+                            Quantity:
+                            <asp:DropDownList ID="DropDownList1" runat="server">
+                                <asp:ListItem>1</asp:ListItem>
+                                <asp:ListItem>2</asp:ListItem>
+                                <asp:ListItem>3</asp:ListItem>
+                                <asp:ListItem>4</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>
+                            </asp:DropDownList>  
+                              
+                            &nbsp;&nbsp;
+                            <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument='<%# Eval("Package_ID") %>' CommandName="AddToCart" Height="40px" ImageUrl="~/Images/ShoppingCart.jpg" />
+
+
+                        </td>
+                    
                 </tr>
             </table>
         </SelectedItemTemplate>
