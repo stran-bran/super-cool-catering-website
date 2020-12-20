@@ -8,70 +8,73 @@
 <html>
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
     <style type="text/css">
         .auto-style1 {
             width: 100%;
-            margin-top:0px;
+            margin-top: 0px;
             height: 412px;
         }
+
         body {
-            height:1000px;
-            margin:0;
+            height: 1000px;
+            margin: 0;
             background-color: gainsboro;
         }
-        ul {
-            position:relative;
-            top:0;
-            background-color: whitesmoke;
-            height:190px;
-            width:100%;
-            
-        }
-        li {
 
+        ul {
+            position: relative;
+            top: 0;
+            background-color: whitesmoke;
+            height: 190px;
+            width: 100%;
+        }
+
+        li {
             width: 15%;
             color: red;
             margin-right: 5px;
-            vertical-align:middle;
-            display:inline;
-           
+            vertical-align: middle;
+            display: inline;
         }
-        #cartImage{
-            height : 5%;
-            width : 5%;
+
+        #cartImage {
+            height: 5%;
+            width: 5%;
         }
+
         #logoPictureContainsLink {
             height: 100%;
-            width:50px;
+            width: 50px;
         }
-        .login{
+
+        .login {
             width: 10%;
-            vertical-align:middle;
-            
+            vertical-align: middle;
         }
+
         .auto-style12 {
-            width:50%;
-             margin-top: 0px;
-           height: 400px;
-             
+            width: 50%;
+            margin-top: 0px;
+            height: 400px;
         }
+
         .auto-style13 {
             left: -40px;
             top: 0;
         }
+
         .auto-style14 {
             width: 31%;
-           position:relative;
-           margin-top: 0px;
+            position: relative;
+            margin-top: 0px;
         }
-     
+
         .auto-style15 {
             height: 134px;
         }
-     
-        </style>
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -83,7 +86,10 @@
                         <li>
                             <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png"  NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li> 
                         <li>
-                            <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Pages/Home page/Home.aspx">Home</asp:HyperLink></li>
+                            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"></asp:Menu>
+                            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                        </li>
+                        
                         <li><input id="searchBar" type="text" placeholder="Search..." /></li>
                         <li><asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
                        

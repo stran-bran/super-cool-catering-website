@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-  <siteMapNode url="~/Pages/Home page/Home.aspx" title="Home"  description="This is my home page">
-    <siteMapNode url="~/Pages/Register page/Register.aspx" title="Register"  description="This is my register page"/>
-    <siteMapNode url="~/Pages/Login page/Login.aspx" title="Login"  description="This is my login page" >
-      <siteMapNode url="~/Pages/Login page/PasswordRecovery.aspx" title="Password recovery"  description="This is my password recovery page"/>
-     
-    </siteMapNode>
+  <siteMapNode url="~/Pages/Home page/Home.aspx" title="Home">
+    <!--admin pages-->
+    <!--<siteMapNode tile="Admin" roles="Admin" description="nav item for Admins">-->
+      <siteMapNode url="~/Pages/Admin/CatererManagement(admin).aspx" title="Role Management" roles="Admin"  description="manage user's roles" />
+      <siteMapNode url="~/Pages/Admin/Dashboard(admin).aspx" title="Dashborad" roles="Admin" description="Get bussnisse information" />
+      <siteMapNode url="~/Pages/Admin/Report(Admin).aspx" title="Report" roles="Admin" description="Monthly reports" />
+    <!--</siteMapNode>-->
+    <!--caterer pages-->
+    <!--<siteMapNode tile="Manage Business" roles="Caterer" description="nav item for Caterer">-->
+    <siteMapNode url="~/Pages/ProfilePage/CatererProfile.aspx" title="CatererManagesment" roles="Caterer" description="Monthly reports" />
+    <!--</siteMapNode>-->
+    <!--signed in customer pages-->
+    <!--<siteMapNode tile="Your profile" roles="Caterer" description="nav item for Caterer">-->
+    <siteMapNode url="~/Pages/ProfilePage/CustomerProfile.aspx" title="Your profile" roles="Member" description="CustomerProfile" />
+    <!--</siteMapNode>-->
   </siteMapNode>
 </siteMap>

@@ -11,7 +11,7 @@ namespace CatererService.Pages.Admin
 {
 
 
-    public partial class Dashboard_admin_
+    public partial class DashBoard_Admin_
     {
 
         /// <summary>
@@ -24,21 +24,12 @@ namespace CatererService.Pages.Admin
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// GridView2 control.
+        /// SqlDashboard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
-
-        /// <summary>
-        /// SqlDashBoard control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDashBoard;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDashboard;
     }
 }
