@@ -74,6 +74,7 @@
   <ItemGroup>
     <Content Include="Caterer\CatererList.ascx" />
     <Content Include="Caterer\CatererPackages.aspx" />
+    <Content Include="Confirmation email\ContactUs.aspx" />
     <Content Include="Confirmation email\SignUpConfirmation.txt" />
     <Content Include="Images\breakfast.jpg" />
     <Content Include="Images\catering-clipart-food-catering-4.jpg" />
@@ -114,6 +115,13 @@
     </Compile>
     <Compile Include="Caterer\CatererPackages.aspx.designer.cs">
       <DependentUpon>CatererPackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmation email\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmation email\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master\Master1.Master.cs">
       <DependentUpon>Master1.Master</DependentUpon>
