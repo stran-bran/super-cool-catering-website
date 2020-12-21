@@ -92,6 +92,7 @@
     <Content Include="Pages\Admin\Report%28Admin%29.aspx" />
     <Content Include="Pages\Cart\Cart.aspx" />
     <Content Include="Pages\Caterer\Order.aspx" />
+    <Content Include="Pages\Caterer\PackageManagement.aspx" />
     <Content Include="Pages\Home page\Home.aspx" />
     <Content Include="Pages\Login page\Login.aspx" />
     <Content Include="Pages\Login page\PasswordRecovery.aspx" />
@@ -99,6 +100,7 @@
     <Content Include="Pages\ProfilePage\CatererProfile.aspx" />
     <Content Include="Pages\ProfilePage\CustomerProfile.aspx" />
     <Content Include="Pages\Register page\Register.aspx" />
+    <Content Include="Pages\SearchResult.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +160,13 @@
     <Compile Include="Pages\Caterer\Order.aspx.designer.cs">
       <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Caterer\PackageManagement.aspx.cs">
+      <DependentUpon>PackageManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Caterer\PackageManagement.aspx.designer.cs">
+      <DependentUpon>PackageManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Home page\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -206,6 +215,13 @@
     </Compile>
     <Compile Include="Pages\Register page\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchResult.aspx.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchResult.aspx.designer.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
