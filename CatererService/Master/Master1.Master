@@ -85,10 +85,7 @@
                     <ul class="auto-style13">
                         <li>
                             <asp:HyperLink ID="logoPictureContainsLink" runat="server" ImageUrl="~/Images/logo.png"  NavigateUrl="~/Pages/Home page/Home.aspx"></asp:HyperLink></li> 
-                        <li>
-                            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"></asp:Menu>
-                            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-                        </li>
+                     
                         
                         <li><input id="searchBar" type="text" placeholder="Search..." /></li>
                         <li><asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="61px" /></li>
@@ -103,6 +100,7 @@
                            <li class="login" >
                         </li>
                            
+       
                     </ul>
                    </div>
                 
@@ -120,6 +118,12 @@
             </tr>
         </table>
 
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"></asp:Menu>
+                            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+        <a href="../Confirmation%20email/ContactUs.aspx">Contact Us
+            
+    </a>
    
     </form>
    
