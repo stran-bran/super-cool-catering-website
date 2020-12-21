@@ -5,15 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CatererService.Pages.Home_page
+namespace CatererService.Pages.Cart
 {
-    public partial class Home : System.Web.UI.Page
+    public partial class AddtoCart : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        
     }
 }

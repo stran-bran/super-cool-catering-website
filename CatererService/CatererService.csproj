@@ -74,10 +74,11 @@
   <ItemGroup>
     <Content Include="Caterer\CatererList.ascx" />
     <Content Include="Caterer\CatererPackages.aspx" />
+    <Content Include="Confirmation email\ContactUs.aspx" />
     <Content Include="Confirmation email\SignUpConfirmation.txt" />
     <Content Include="Images\breakfast.jpg" />
     <Content Include="Images\catering-clipart-food-catering-4.jpg" />
-    <Content Include="Images\familyDinner.jpg" />
+    <Content Include="Images\spaghetti.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\NoodlesBowl.jpg" />
     <Content Include="Images\organicFruits.jpg" />
@@ -90,6 +91,7 @@
     <Content Include="Pages\Admin\CatererManagement%28admin%29.aspx" />
     <Content Include="Pages\Admin\Dashboard%28admin%29.aspx" />
     <Content Include="Pages\Admin\Report%28Admin%29.aspx" />
+    <Content Include="Pages\Cart\AddtoCart.aspx" />
     <Content Include="Pages\Cart\Cart.aspx" />
     <Content Include="Pages\Caterer\Order.aspx" />
     <Content Include="Pages\Caterer\PackageManagement.aspx" />
@@ -118,6 +120,13 @@
     <Compile Include="Caterer\CatererPackages.aspx.designer.cs">
       <DependentUpon>CatererPackages.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Confirmation email\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmation email\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Master\Master1.Master.cs">
       <DependentUpon>Master1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,6 +154,13 @@
     </Compile>
     <Compile Include="Pages\Admin\Report%28Admin%29.aspx.designer.cs">
       <DependentUpon>Report%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cart\AddtoCart.aspx.cs">
+      <DependentUpon>AddtoCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cart\AddtoCart.aspx.designer.cs">
+      <DependentUpon>AddtoCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Cart\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
