@@ -42,6 +42,7 @@ namespace CatererService.Master
         protected global::System.Web.UI.WebControls.HyperLink logoPictureContainsLink;
 
         /// <summary>
+        /// txtSearch control.
         /// ButtonSearch control.
         /// </summary>
         /// <remarks>
@@ -106,6 +107,33 @@ namespace CatererService.Master
 
         /// <summary>
         /// SiteMapDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
+
+        /// <summary>
+        /// CatererList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Menu Menu1;
+
+        /// <summary>
+        /// grdSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdSearch;
+
+        /// <summary>
+        /// ContentPlaceHolder1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
