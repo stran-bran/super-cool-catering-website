@@ -91,6 +91,7 @@
     <Content Include="Pages\Admin\Dashboard%28admin%29.aspx" />
     <Content Include="Pages\Admin\Report%28Admin%29.aspx" />
     <Content Include="Pages\Cart\Cart.aspx" />
+    <Content Include="Pages\Caterer\Order.aspx" />
     <Content Include="Pages\Home page\Home.aspx" />
     <Content Include="Pages\Login page\Login.aspx" />
     <Content Include="Pages\Login page\PasswordRecovery.aspx" />
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="Pages\Cart\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Caterer\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Caterer\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Home page\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
